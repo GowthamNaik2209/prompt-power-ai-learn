@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -416,6 +415,10 @@ Prompting is the bridge between your needs and AI's capabilities. Like any commu
 
   // Chapter content view
   if (selectedChapter && selectedChapterData) {
+    const currentChapterIndex = module1Chapters.findIndex(c => c.id === selectedChapter);
+    const previousChapter = currentChapterIndex > 0 ? module1Chapters[currentChapterIndex - 1] : null;
+    const nextChapter = currentChapterIndex < module1Chapters.length - 1 ? module1Chapters[currentChapterIndex + 1] : null;
+
     return (
       <div className="min-h-screen bg-background">
         {/* Simple Navigation */}
@@ -483,6 +486,40 @@ Prompting is the bridge between your needs and AI's capabilities. Like any commu
               </div>
             </CardContent>
           </Card>
+
+          {/* Chapter Navigation */}
+          <div className="flex justify-between items-center mt-8 pt-6 border-t">
+            <div className="flex-1">
+              {previousChapter && (
+                <Button 
+                  variant="outline" 
+                  onClick={() => handleChapterClick(previousChapter.id)}
+                  className="flex items-center gap-2"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  <div className="text-left">
+                    <div className="text-sm text-muted-foreground">Previous</div>
+                    <div className="font-medium">{previousChapter.title}</div>
+                  </div>
+                </Button>
+              )}
+            </div>
+            
+            <div className="flex-1 flex justify-end">
+              {nextChapter && (
+                <Button 
+                  onClick={() => handleChapterClick(nextChapter.id)}
+                  className="flex items-center gap-2"
+                >
+                  <div className="text-right">
+                    <div className="text-sm opacity-90">Next</div>
+                    <div className="font-medium">{nextChapter.title}</div>
+                  </div>
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              )}
+            </div>
+          </div>
 
           {/* Progress Save Prompt */}
           <Card className="bg-muted mt-8">
