@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, Clock, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
+import ReactMarkdown from 'react-markdown'; // Import ReactMarkdown
+import remarkGfm from 'remark-gfm'; // Import remarkGfm for tables and other GFM features
 
 interface Chapter {
   id: number;
@@ -80,9 +82,10 @@ export const ModuleView = ({ module, onBack, currentChapter, onChapterClick }: M
         <Card>
           <CardContent className="p-8">
             <div className="prose prose-lg max-w-none">
-              <div className="text-gray-700 leading-relaxed text-lg whitespace-pre-line">
+              {/* Use ReactMarkdown to render the content */}
+              <ReactMarkdown remarkPlugins={[remarkGfm]} className="text-gray-700 leading-relaxed text-lg">
                 {currentChapterData.content}
-              </div>
+              </ReactMarkdown>
             </div>
           </CardContent>
         </Card>
