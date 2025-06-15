@@ -63,7 +63,7 @@ export const Dashboard = ({ user }: DashboardProps) => {
     {
       id: "module-2",
       title: "Mastering Conversational AI",
-      description: "Welcome to Module 2! Now that you understand what AI is and the magic of Generative AI, it's time to get practical. This module is all about turning those powerful Large Language Models (LLMs) into your personal productivity and creativity assistant. Think of it like having a super-smart, always-available colleague you can brainstorm with, ask questions, or delegate tasks to. We'll show you how to get real work done and truly benefit from AI chats in your daily life, moving beyond simple queries to strategic application.",
+      description: "Turn powerful Large Language Models (LLMs) into your personal productivity and creativity assistant for daily tasks.",
       chapters: 6,
       completedChapters: 0,
       estimatedTime: "75-90 minutes",
@@ -409,7 +409,7 @@ Quick Self-Check: Based on your current professional or personal needs (e.g., wr
     {
       id: "module-3",
       title: "From Text to Screen",
-      description: "Welcome to Module 3! In the previous modules, you mastered communicating with AI using text, transforming your ideas into powerful written content. Now, we're going to dive into a truly exciting and visually dynamic frontier: using AI to create visual content, specifically video. This capability is rapidly democratizing content creation, allowing individuals and small teams to produce high-quality visual stories without extensive training or expensive equipment. Imagine AI not just as an assistant for text, but as your personal film crew. It can help you with every stage, from crafting compelling scripts and generating natural-sounding voiceovers, to producing stunning visuals and even animating complex scenes. This module will show you how AI video generation works under the hood, how you can start creating your own videos with accessible tools today, and offer a glimpse into the cutting-edge advancements shaping the future of AI in filmmaking.",
+      description: "Explore how AI can help you create dynamic visual content, specifically video, transforming your text ideas into compelling visual stories",
       chapters: 4,
       completedChapters: 0,
       estimatedTime: "75-90 minutes",
