@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -39,25 +38,25 @@ export const Dashboard = ({ user }: DashboardProps) => {
           id: 1, 
           title: "What is AI?", 
           duration: "15 min",
-          content: "Artificial Intelligence (AI) is a technology that enables machines to think and learn like humans. It exists in many forms in our daily lives - from voice assistants to recommendation systems and smart cameras. AI can process information, recognize patterns, and make decisions based on data."
+          content: "Artificial Intelligence (AI) is a technology that enables machines to think and learn like humans. It exists in many forms in our daily lives - from voice assistants to recommendation systems and smart cameras. AI can process information, recognize patterns, and make decisions based on data. Unlike traditional computer programs that follow pre-written instructions, AI systems can adapt and improve their performance over time by learning from experience."
         },
         { 
           id: 2, 
           title: "History of AI", 
           duration: "20 min",
-          content: "AI began in the 1950s when Alan Turing proposed the 'Turing Test'. Over time, AI has had many ups and downs, and today we're in the era of machine learning and deep learning. Key milestones include expert systems in the 1980s, the AI winter periods, and the recent breakthrough with neural networks."
+          content: "AI began in the 1950s when Alan Turing proposed the 'Turing Test' to determine if a machine could exhibit intelligent behavior equivalent to a human. The field has experienced several waves of excitement and disappointment, known as 'AI winters.' Key milestones include the development of expert systems in the 1980s, the victory of IBM's Deep Blue over chess champion Garry Kasparov in 1997, and the recent breakthroughs in neural networks and deep learning that have led to modern AI applications like ChatGPT and image generators."
         },
         { 
           id: 3, 
           title: "Types of AI", 
           duration: "18 min",
-          content: "AI can be categorized into three main types: Narrow AI (for specific tasks), General AI (human-like intelligence), and Super AI (beyond human capabilities). Currently, we're in the era of Narrow AI, where systems excel at specific tasks like image recognition, language translation, or game playing."
+          content: "AI can be categorized into three main types: Narrow AI (Artificial Narrow Intelligence) is designed for specific tasks like image recognition, language translation, or playing chess. This is the only type of AI that currently exists. General AI (Artificial General Intelligence) would have human-like intelligence and the ability to understand, learn, and apply knowledge across various domains. Super AI (Artificial Superintelligence) would surpass human intelligence in all aspects. While General and Super AI remain theoretical, Narrow AI is already transforming industries and daily life."
         },
         { 
           id: 4, 
           title: "AI Applications", 
           duration: "22 min",
-          content: "AI is being used in healthcare for medical diagnosis, in education for personalized learning, in transportation for autonomous vehicles, and in entertainment for content recommendations. Every industry is finding ways to leverage AI to improve efficiency and create new possibilities."
+          content: "AI is revolutionizing numerous industries. In healthcare, AI helps with medical diagnosis, drug discovery, and personalized treatment plans. In education, it enables personalized learning experiences and intelligent tutoring systems. Transportation benefits from autonomous vehicles and traffic optimization. Entertainment platforms use AI for content recommendations and content creation. Finance employs AI for fraud detection, algorithmic trading, and risk assessment. Other applications include smart home devices, virtual assistants, language translation, and customer service chatbots."
         }
       ]
     },
@@ -65,7 +64,7 @@ export const Dashboard = ({ user }: DashboardProps) => {
       id: "module-2",
       title: "Mastering Conversational AI",
       description: "Learn to have productive conversations with AI assistants like ChatGPT",
-      chapters: 12,
+      chapters: 6,
       completedChapters: 3,
       estimatedTime: "3 hours",
       difficulty: "Beginner" as const,
@@ -75,13 +74,37 @@ export const Dashboard = ({ user }: DashboardProps) => {
           id: 1, 
           title: "Introduction to Conversational AI", 
           duration: "25 min",
-          content: "Conversational AI represents a breakthrough in how we interact with machines. These systems can understand natural language, maintain context, and provide helpful responses across a wide range of topics."
+          content: "Conversational AI represents a breakthrough in how we interact with machines. These systems, powered by large language models like GPT, can understand natural language, maintain context across conversations, and provide helpful responses across a wide range of topics. Unlike traditional chatbots that follow scripted responses, modern conversational AI can engage in nuanced discussions, help with creative tasks, provide explanations, and even assist with problem-solving."
         },
         { 
           id: 2, 
           title: "Effective Prompting Basics", 
           duration: "30 min",
-          content: "The key to getting great results from AI is learning how to communicate effectively. This involves being clear, specific, and providing the right context for your requests."
+          content: "The key to getting great results from AI is learning how to communicate effectively through prompting. A good prompt is clear, specific, and provides the right context. Start with a clear instruction, provide relevant background information, specify the desired format or style, and include examples when helpful. For instance, instead of asking 'Write about dogs,' try 'Write a 200-word informative paragraph about the benefits of dog ownership for families with children, focusing on companionship and responsibility.'"
+        },
+        { 
+          id: 3, 
+          title: "Advanced Prompting Techniques", 
+          duration: "35 min",
+          content: "Advanced prompting techniques can dramatically improve AI responses. Role-based prompting involves asking the AI to assume a specific role (e.g., 'Act as a professional nutritionist'). Chain-of-thought prompting asks the AI to show its reasoning step-by-step. Few-shot prompting provides examples of the desired input-output format. Template prompting uses structured formats for consistent results. Context management involves providing relevant background information while staying within token limits."
+        },
+        { 
+          id: 4, 
+          title: "Common Prompting Mistakes", 
+          duration: "20 min",
+          content: "Avoid these common prompting mistakes: Being too vague ('Help me with my business' vs. 'Help me create a marketing strategy for my small bakery targeting local customers'), asking multiple unrelated questions in one prompt, not providing enough context, using ambiguous language, and expecting the AI to read your mind. Always be specific about what you want, provide necessary background, and break complex requests into smaller, manageable parts."
+        },
+        { 
+          id: 5, 
+          title: "Practical Applications", 
+          duration: "40 min",
+          content: "Conversational AI can assist with numerous practical tasks: Content creation (writing, editing, brainstorming), learning and education (explanations, study guides, practice questions), problem-solving (analysis, step-by-step solutions), research assistance (summarizing information, finding sources), coding help (debugging, explaining concepts, writing code), and personal productivity (planning, organizing, decision-making). The key is to frame your requests clearly and provide the AI with the context it needs to help you effectively."
+        },
+        { 
+          id: 6, 
+          title: "Best Practices and Ethics", 
+          duration: "25 min",
+          content: "When using conversational AI, follow these best practices: Always fact-check important information, be transparent when using AI-generated content, respect intellectual property and privacy, use AI as a tool to enhance rather than replace human judgment, and be aware of potential biases in AI responses. Remember that AI can make mistakes, may not have access to the most recent information, and should not be used for medical, legal, or financial advice without professional consultation."
         }
       ]
     },
@@ -99,7 +122,7 @@ export const Dashboard = ({ user }: DashboardProps) => {
           id: 1, 
           title: "Overview of AI Productivity Tools", 
           duration: "20 min",
-          content: "Coming soon - explore the landscape of AI tools that can enhance your daily productivity."
+          content: "Coming soon - explore the landscape of AI tools that can enhance your daily productivity across writing, design, analysis, and automation."
         }
       ]
     }
