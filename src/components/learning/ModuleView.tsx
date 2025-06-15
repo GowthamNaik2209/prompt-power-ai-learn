@@ -61,9 +61,9 @@ export const ModuleView = ({ module, onBack, currentChapter, onChapterClick }: M
         <Card>
           <CardContent className="p-8">
             <div className="prose prose-lg max-w-none">
-              <p className="text-gray-700 leading-relaxed text-lg">
+              <div className="text-gray-700 leading-relaxed text-lg whitespace-pre-line">
                 {currentChapterData.content}
-              </p>
+              </div>
             </div>
           </CardContent>
         </Card>
