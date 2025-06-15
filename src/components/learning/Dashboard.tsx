@@ -34,32 +34,318 @@ export const Dashboard = ({ user }: DashboardProps) => {
       difficulty: "Beginner" as const,
       isLocked: false,
       chapterList: [
-        { 
-          id: 1, 
-          title: "What is AI?", 
-          duration: "15 min",
-          content: "Artificial Intelligence (AI) is a technology that enables machines to think and learn like humans. It exists in many forms in our daily lives - from voice assistants to recommendation systems and smart cameras. AI can process information, recognize patterns, and make decisions based on data. Unlike traditional computer programs that follow pre-written instructions, AI systems can adapt and improve their performance over time by learning from experience."
-        },
-        { 
-          id: 2, 
-          title: "History of AI", 
-          duration: "20 min",
-          content: "AI began in the 1950s when Alan Turing proposed the 'Turing Test' to determine if a machine could exhibit intelligent behavior equivalent to a human. The field has experienced several waves of excitement and disappointment, known as 'AI winters.' Key milestones include the development of expert systems in the 1980s, the victory of IBM's Deep Blue over chess champion Garry Kasparov in 1997, and the recent breakthroughs in neural networks and deep learning that have led to modern AI applications like ChatGPT and image generators."
-        },
-        { 
-          id: 3, 
-          title: "Types of AI", 
-          duration: "18 min",
-          content: "AI can be categorized into three main types: Narrow AI (Artificial Narrow Intelligence) is designed for specific tasks like image recognition, language translation, or playing chess. This is the only type of AI that currently exists. General AI (Artificial General Intelligence) would have human-like intelligence and the ability to understand, learn, and apply knowledge across various domains. Super AI (Artificial Superintelligence) would surpass human intelligence in all aspects. While General and Super AI remain theoretical, Narrow AI is already transforming industries and daily life."
-        },
-        { 
-          id: 4, 
-          title: "AI Applications", 
-          duration: "22 min",
-          content: "AI is revolutionizing numerous industries. In healthcare, AI helps with medical diagnosis, drug discovery, and personalized treatment plans. In education, it enables personalized learning experiences and intelligent tutoring systems. Transportation benefits from autonomous vehicles and traffic optimization. Entertainment platforms use AI for content recommendations and content creation. Finance employs AI for fraud detection, algorithmic trading, and risk assessment. Other applications include smart home devices, virtual assistants, language translation, and customer service chatbots."
-        }
-      ]
+       {
+      id: 1,
+      title: "What is AI? (The Big Picture)",
+      duration: "15 min",
+      content: `The Netflix Moment
+Let me start with a question: Have you ever wondered how Netflix seems to know exactly what show you want to watch next? Or how your phone's camera instantly recognizes your face to unlock? Maybe you've noticed that Google Maps always suggests the fastest route, even accounting for current traffic conditions?
+Congratulations – you've been using Artificial Intelligence, probably multiple times today, without even thinking about it.
+
+Defining AI: Beyond the Science Fiction
+Artificial Intelligence (AI) is simply machines that can learn patterns and solve problems. That's it. No robot uprising, no sentient computers plotting world domination – just very clever software that can recognize patterns in data and make decisions based on those patterns.
+Think of AI like a really, really good pattern recognition system. Imagine you have a friend who's incredibly observant. After watching you choose what to eat for breakfast for a few months, they could probably predict with surprising accuracy what you'll want tomorrow morning. AI works similarly, but instead of watching just one person's breakfast choices, it can analyze millions of people's preferences, behaviors, and decisions to make predictions and suggestions.
+
+AI is Already Everywhere in Your Life
+Let's play a quick game. I'll list some everyday experiences, and you'll probably realize that AI is working behind the scenes:
+
+| Area of Life        | Everyday Experience                                      | How AI is Working Behind the Scenes                                   |
+|---------------------|----------------------------------------------------------|-----------------------------------------------------------------------|
+| Online Shopping     | Amazon shows "Customers who bought this also bought..."  | AI analyzes purchasing patterns to suggest relevant items.            |
+| Your Phone          | Face unlock; Keyboard predicts your next word.           | AI recognizes facial features; learns from millions of text messages. |
+| Travel & Navigation | Google Maps finds the fastest route; Uber matches drivers. | AI processes real-time traffic data; optimizes driver-rider networks.   |
+| Content & Media     | YouTube suggests videos; Spotify creates personalized playlists. | AI analyzes viewing/listening history and behavior patterns.        |
+| Finance             | Credit card company flags unusual spending as fraud.     | AI compares current transactions to your historical financial behavior. |
+
+The Three Types of AI You Encounter Daily
+To make this even clearer, let's categorize the AI you interact with:
+* **Recommendation AI:** This AI studies what you like and suggests more of it. Every time you see "Recommended for you" or "People also viewed," you're seeing recommendation AI at work. It's like having a personal shopper who knows your taste perfectly.
+* **Recognition AI:** This AI identifies things in images, sounds, or text. When your phone recognizes faces in photos, when Shazam identifies a song, or when Google Translate reads text from a photo – that's recognition AI. It's like having superhuman senses that can instantly identify anything.
+* **Prediction AI:** This AI forecasts what might happen next. Weather apps, stock price predictions, or your GPS estimating arrival time – all powered by prediction AI. It's like having a crystal ball, but one based on data rather than magic.
+
+Why AI Works So Well Now
+You might wonder: "If AI is so useful, why am I just hearing about it now?" Great question!
+AI isn't new – the concept has been around since the 1950s. But three things came together recently to make AI incredibly powerful:
+* **Massive Amounts of Data:** Every time you use the internet, you create data. Every search, click, purchase, photo, and message becomes training material for AI. We now have more data than ever before in human history.
+* **Powerful Computing:** The computers needed to process all this data became fast enough and cheap enough. What would have required a room-sized supercomputer in the 1990s can now be done on your laptop.
+* **Better Algorithms:** Scientists and engineers developed smarter ways to find patterns in data. These new techniques, especially something called "deep learning," are much more effective than older methods.
+Think of it like cooking: you always had the recipe (algorithms), but now you have better ingredients (data) and a much better kitchen (computing power).
+
+Key Takeaway for Chapter 1.1
+AI isn't some futuristic technology – it's already seamlessly integrated into your daily life, making your experiences more convenient, personalized, and efficient. The AI revolution isn't coming; it's already here, working quietly in the background of apps and services you use every day.
+
+Quick Self-Check: Can you identify three AI-powered features you've used in the last 24 hours? (Hint: Check your phone's recent activity, your streaming service, or your online shopping history.)`
     },
+    {
+      id: 2,
+      title: "Generative AI - The \"Creative\" Machines",
+      duration: "15 min",
+      content: `The Creative Breakthrough
+Now, let's talk about the AI that's got everyone excited lately. You've probably heard terms like ChatGPT, DALL-E, or Midjourney in the news. These represent a special category of AI called Generative AI – AI that doesn't just recognize patterns or make recommendations, but actually creates new content.
+
+The Artist Analogy
+Imagine you have a friend who's an incredibly talented artist. This friend has studied every painting in every major museum, read every book in the library, and watched every movie ever made. Now, when you ask them to create something – a story, a painting, a song – they don't copy any single work, but instead create something entirely new inspired by everything they've learned.
+That's essentially what Generative AI does. It learns from massive amounts of existing content and then creates new content that's original but informed by all its training.
+
+What Makes Generative AI Different?
+Traditional AI (what we discussed in Chapter 1.1) is mostly about understanding and categorizing existing information:
+* "Is this email spam or not spam?"
+* "Which movie should I recommend?"
+* "What's the fastest route to work?"
+Generative AI, on the other hand, is about creating new information:
+* "Write me a story about a time-traveling chef."
+* "Create an image of a cat wearing sunglasses on a beach."
+* "Compose a song in the style of The Beatles but about modern technology."
+
+The Big Three: Text, Images, and Video
+Generative AI currently excels in three main areas:
+
+| Type of Generative AI | What It Does (Examples)                              | Popular Tools                                         | Real-World Use Case                                                                                                    |
+|-----------------------|------------------------------------------------------|-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| Text Generation       | Writes essays, stories, emails, code, poems, scripts.| ChatGPT, Google Bard/Gemini, Claude, Microsoft Copilot | A marketing manager uses ChatGPT to draft 10 different email subject lines for a campaign.                               |
+| Image Generation      | Creates original images from text descriptions.      | DALL-E, Midjourney, Stable Diffusion, Adobe Firefly | A small business owner creates social media graphics by typing "modern logo for organic coffee shop with mountain theme." |
+| Video Generation      | Creates short video clips from text descriptions or still images. | Sora, Runway ML, Pika Labs                            | A content creator generates a 10-second video of "ocean waves at sunset" for their YouTube intro.                        |
+
+How Generative AI "Thinks"
+Here's a simplified way to understand how Generative AI works:
+* **Learning Phase:** The AI studies millions of examples (texts, images, videos).
+* **Pattern Recognition:** It identifies what makes good writing, compelling images, or engaging videos.
+* **Generation Phase:** When you give it a prompt, it uses these patterns to create something new.
+* **Refinement:** It checks its creation against what it learned to make sure it makes sense.
+It's similar to how humans learn to be creative. A musician doesn't create songs in a vacuum – they're influenced by all the music they've heard throughout their life. The AI works the same way, just with access to vastly more examples than any human could ever study.
+
+The Magic and the Limitations
+Here's a balanced view of Generative AI:
+
+| What's Magical About It                 | What It Can't Do (Yet)                                                     |
+|-----------------------------------------|----------------------------------------------------------------------------|
+| Speed: Creates in seconds what might take humans hours or days. | Original Thinking: Recombines existing ideas, not truly original thoughts. |
+| Variety: Can produce countless variations on any theme. | Fact-Checking: Can confidently state incorrect information (this is called "hallucinating"). |
+| Accessibility: Anyone can use it, no special training required. | Emotional Understanding: Mimics emotional language but doesn't truly feel emotions. |
+| Consistency: Works 24/7 without getting tired or losing creativity. | Long-term Memory: Each conversation is independent; doesn't remember you between sessions. |
+
+Real-World Applications You Can Use Today
+Let's get practical. Here are ways people are already using Generative AI:
+* **Students:** Generate essay outlines, create study guides, practice language skills.
+* **Professionals:** Draft emails and proposals, create presentation slides and marketing copy, generate ideas for projects.
+* **Creatives:** Overcome writer's block, create concept art, generate social media content and captions.
+* **Everyday Users:** Plan meals and generate recipes, create personalized workout routines, write thank-you notes and birthday messages.
+
+The Economic Impact
+Generative AI is already changing how work gets done. It's not replacing humans entirely, but it's making humans much more productive. A graphic designer can now create 20 concept designs in the time it used to take to create 3. A writer can produce a first draft in minutes instead of hours. A programmer can generate code snippets instantly.
+This is why businesses are investing heavily in AI – it's not just cool technology, it's a productivity multiplier.
+
+Key Takeaway for Chapter 1.2
+Generative AI represents a fundamental shift from AI that just processes information to AI that creates new information. It's like having a creative collaborator that never gets tired, can work in any style, and can produce endless variations on any idea. While it has limitations, its ability to accelerate human creativity and productivity is already transforming how we work and create.
+
+Quick Self-Check: Think of one creative task you do regularly (writing emails, creating presentations, planning events). How might Generative AI help you do this task faster or better?`
+    },
+    {
+      id: 3,
+      title: "Large Language Models (LLMs) - Your New AI Colleagues",
+      duration: "15 min",
+      content: `The Super-Librarian Analogy
+Imagine the most knowledgeable librarian you can think of. Now imagine this librarian has read every book, article, website, and document ever written in multiple languages. They have perfect memory and can instantly recall information on any topic. They can also write in any style, from academic papers to casual emails to creative stories.
+That's essentially what a Large Language Model (LLM) is – a digital super-librarian that has "read" vast amounts of text and can help you with almost any language-related task.
+
+What Does "Large Language Model" Actually Mean?
+Let's break down the name:
+* **Large:** These models are trained on enormous amounts of text – we're talking about most of the publicly available internet, millions of books, articles, and documents. The datasets are so large that if you printed them out, the paper would stack higher than Mount Everest.
+* **Language:** They understand and generate human language. Not just English, but dozens of languages, and they can even translate between them.
+* **Model:** In AI terms, a "model" is like a complex mathematical recipe that has learned patterns from data. Think of it as a very sophisticated pattern-matching system.
+
+How LLMs Actually Work (Simplified)
+Here's the fascinating part: LLMs don't actually "understand" language the way humans do. Instead, they're incredibly sophisticated prediction engines.
+
+The Prediction Game:
+If I start a sentence with "The capital of France is..." you'd immediately think "Paris." That's because you've learned patterns in language. LLMs work similarly but at a massive scale.
+When you ask an LLM "What's the weather like?" it doesn't look up weather data. Instead, it predicts that the most likely response is to ask for your location or explain that it can't access real-time weather data. It has learned from millions of similar conversations what the appropriate response pattern should be.
+
+The Training Process:
+* **Feed it text:** The LLM reads billions of sentences from books, websites, articles.
+* **Play prediction games:** It learns to predict the next word in sentences.
+* **Get feedback:** When it predicts correctly, it reinforces that pattern.
+* **Scale up:** Repeat this process trillions of times with increasingly complex text.
+
+Meet the Major Players
+Just like you have different brands of cars (Toyota, Ford, BMW), you have different "brands" of LLMs. Each has its own strengths and characteristics:
+
+| LLM "Brand"   | By Company      | Personality & Strengths                                                                                                                                                                                                                                                                      | Best For                                                                                                                                                            | Think of it as...                                                             |
+|---------------|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| ChatGPT       | OpenAI          | Friendly, creative conversationalist; broad knowledge. Often described as the friendly, creative, and highly versatile conversationalist. Excels at generating engaging and natural-sounding text. Known for its broad general knowledge and ability to adapt to various tones and styles. Has a very active and supportive user community. | Creative writing, brainstorming, coding help, general knowledge queries, explaining complex topics in an engaging way.                                                      | The enthusiastic teacher who makes everything interesting.                    |
+| Google Gemini | Google          | Research-focused, factual assistant; strong Google integration. Positioned as the research-focused, factual assistant. Its key strength lies in its powerful multimodal capabilities (understanding text, images, audio, video) and deep integration with Google's vast ecosystem, particularly Google Search for more up-to-date information. Often provides multiple "drafts" of responses. | Research tasks, factual questions, current events, planning, Google Workspace integration, visual data analysis.                                                      | The efficient research assistant with access to Google's resources.             |
+| Claude        | Anthropic       | Thoughtful, careful, ethical; handles long documents. Distinguished by its strong emphasis on safety, helpfulness, and ethical AI development. It excels at handling very long documents and nuanced, complex conversations due to its exceptionally large "context window" (its ability to remember and process extensive prior dialogue). Tends to be more analytical and less prone to "fluff." | Analyzing long documents, sensitive topics, professional communication, ethical considerations.                                                                        | The wise counselor who thinks before speaking.                                |
+| Microsoft Copilot | Microsoft     | Productivity-focused work assistant; Microsoft Office integration. Designed as a productivity-focused work assistant, deeply integrated with Microsoft 365 applications (Word, Excel, PowerPoint, Outlook, Teams). It brings AI capabilities directly into your familiar work tools, making it highly contextual for professional tasks. | Office work, email management, business documents.                                                                                                                    | The efficient personal assistant for professional tasks.                      |
+
+What LLMs Can Do Right Now
+Let's get specific about the practical capabilities:
+* **Writing and Communication:** Draft emails, letters, messages; create outlines; improve existing text; translate.
+* **Learning and Explanation:** Explain complex topics in simple terms; create study guides; answer questions; provide step-by-step instructions.
+* **Creative Tasks:** Write stories, poems, scripts; generate ideas for projects; create dialogue; brainstorm solutions.
+* **Analysis and Reasoning:** Summarize long documents; compare pros and cons; break down problems; provide different perspectives.
+
+What LLMs Cannot Do (Important Limitations)
+It's crucial to understand the boundaries of LLMs:
+
+| Limitation                | Explanation                                                                                                                                                                                                                                                              |
+|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| No Real-Time Info         | Most LLMs were trained on data up to a certain point and don't know about very recent events (e.g., today's weather).                                                                                                                                                    |
+| "Hallucinate"             | They can confidently state incorrect information if they get confused by patterns in their training data. Always verify!                                                                                                                                                |
+| No Persistent Memory      | Each conversation is typically independent. They don't remember you between sessions (unless the service saves chat history).                                                                                                                                            |
+| Can't Access External Systems | They can't browse the internet in real-time, make phone calls, send emails for you, or control other software (unless specifically integrated).                                                                                                                     |
+| No Emotions/Consciousness | Despite seeming human-like, they are sophisticated pattern-matching systems, not sentient beings.                                                                                                                                                                          |
+
+The Economics of LLMs
+Free vs. Paid Versions:
+* **Free versions:** Usually have usage limits, might be slower, and may have fewer features.
+* **Paid versions:** Offer faster responses, higher usage limits, access to newer models, and additional features like image generation.
+Cost Structure:
+LLMs are expensive to run due to massive computing power. Companies typically offer free tiers (often supported by advertising), subscription models ($10-20/month for individuals), or pay-per-use for businesses (charged per word/token processed).
+
+How LLMs Are Changing Work and Learning
+* **For Students:** Research assistance, writing help, concept explanation, study material creation.
+* **For Professionals:** Email and document drafting, meeting summary generation, idea brainstorming, content creation for marketing.
+* **For Creators:** Content ideation and planning, first draft generation, style and tone adjustment, creative inspiration.
+
+The Trust Factor: How to Use LLMs Wisely
+* **Always Verify Important Information:** Think of LLM responses as starting points, not final answers. For critical decisions, double-check facts with reliable sources.
+* **Understand the Bias Factor:** LLMs learn from human-created content, so they can inherit human biases. Be aware that responses might reflect certain perspectives more than others.
+* **Use Them as Collaborators, Not Replacements:** LLMs are powerful tools that amplify human capabilities. They're best used to enhance your work, not replace your thinking.
+* **Protect Sensitive Information:** Don't input confidential data, passwords, or personal information into LLMs, as this data might be used for training or could be accessed by others.
+
+Key Takeaway for Chapter 1.3
+Large Language Models are sophisticated pattern-recognition systems that can assist with almost any language-related task. They're like having a knowledgeable colleague available 24/7, but one that needs supervision and fact-checking. Understanding their capabilities and limitations is crucial for using them effectively and responsibly.
+
+Quick Self-Check: Think about your typical workday or study routine. Identify three specific tasks where an LLM could save you time or help you think through problems more effectively.`
+    },
+    {
+      id: 4,
+      title: "The Most Important Skill - Prompting (Talking to AI)",
+      duration: "15 min",
+      content: `The Superpower You Didn't Know You Needed
+Here's something that might surprise you: The most valuable skill in the AI age isn't coding, data science, or engineering. It's knowing how to communicate effectively with AI – something called "prompting." Think of it as learning to speak a new language, but instead of talking to humans, you're talking to machines.
+The difference between someone who gets amazing results from AI and someone who gets mediocre results often comes down to how well they can craft prompts. It's like the difference between a skilled chef and someone who just throws ingredients together – same tools, dramatically different results.
+
+What is a Prompt, Really?
+A prompt is simply your instruction to an AI. It's what you type into ChatGPT, Claude, or any other AI tool to tell it what you want. But here's the key insight: AI is incredibly literal and doesn't have the context that humans naturally share.
+
+Human Communication vs. AI Communication:
+When you ask a friend, "Can you help me with dinner?" your friend understands:
+* You're probably talking about cooking.
+* It's likely for tonight.
+* You might want recipe suggestions or cooking help.
+* The complexity should match your cooking skills.
+When you ask an AI, "Can you help me with dinner?" it might respond with anything from restaurant recommendations to the history of dining etiquette, because it doesn't have context about your situation, skills, or specific needs.
+
+The Anatomy of a Great Prompt
+Let's break down what makes a prompt effective:
+
+| Prompt Component | What It Is                                         | Why It's Important                                                                                             | Example                                                                                                                      |
+|------------------|----------------------------------------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| 1. Context       | Background information for the AI.                 | Helps the AI understand the situation and tailor its response.                                                 | Instead of "Write about dogs," try "I'm writing a blog post for pet owners about choosing the right dog breed for apartment living." |
+| 2. Role          | What expert persona the AI should adopt.           | Directs the AI to think and respond from a specific viewpoint, improving relevance.                               | "Act as a veterinarian," "Respond as a marketing professional," or "You are a patient teacher explaining to a beginner."          |
+| 3. Task          | What specific action or output you want.           | Ensures the AI focuses on your precise objective.                                                              | "Write a 500-word article," "Create a bullet-point list," "Generate 5 creative ideas."                                        |
+| 4. Format        | How the output should be structured or styled.     | Defines the presentation of the AI's response, making it usable for your needs.                                | "Format as an email," "Use a casual, friendly tone," "Include pros and cons sections."                                       |
+| 5. Constraints   | Any limitations or boundaries for the response.    | Guides the AI to stay within desired length, complexity, or content parameters.                                | "Keep it under 200 words," "Use simple language," "Don't include technical jargon."                                         |
+
+Before and After: The Transformation
+Let's see prompting in action with real examples:
+**Bad Prompt:**
+"Write something about productivity."
+AI Response: (Generic, unfocused response about productivity in general)
+**Good Prompt:**
+"You are a time management expert writing for busy professionals. Create a practical guide titled '5 Morning Habits That Double Your Daily Productivity.' Write in a conversational tone, include specific actionable steps for each habit, and keep each section under 100 words. Focus on habits that take less than 10 minutes each."
+AI Response: (Focused, actionable, perfectly formatted guide)
+
+The Four Levels of Prompting Mastery
+* **Level 1: Basic Instructions**
+    * "Summarize this article."
+    * "Write an email about the meeting."
+* **Level 2: Context and Role**
+    * "As a project manager, summarize this technical article for non-technical stakeholders."
+    * "Write a professional but warm email declining a meeting due to schedule conflicts."
+* **Level 3: Iterative Refinement**
+    * Start with a basic prompt, then refine: "That's good, but make it more concise and add specific examples."
+    * "Perfect, now adapt this for a social media post."
+* **Level 4: Complex Multi-Step Prompts**
+    * "I need you to analyze this market research data, identify the top 3 trends, create a summary for executives, and then draft a follow-up strategy presentation outline. Format each section clearly and include specific recommendations."
+
+Prompting Techniques That Work
+* **The "Explain Like I'm 5" Technique:**
+    * Prompt: "Explain quantum computing like I'm 5 years old."
+    * Forces the AI to use simple language and analogies.
+* **The "Think Step by Step" Technique:**
+    * Prompt: "Think step by step: How would I plan a wedding on a $10,000 budget?"
+    * Encourages methodical, organized responses.
+* **The "Multiple Perspectives" Technique:**
+    * Prompt: "Give me three different perspectives on remote work: from an employee, a manager, and a business owner."
+    * Generates balanced, comprehensive viewpoints.
+* **The "Examples and Non-Examples" Technique:**
+    * Prompt: "Write a professional email. Include an example of what TO do and what NOT to do."
+    * Helps clarify expectations through contrast.
+* **The "Role Reversal" Technique:**
+    * Prompt: "I want to practice a job interview. You ask me questions as the interviewer, and I'll respond. After each answer, give me feedback."
+    * Creates interactive learning experiences.
+
+Common Prompting Mistakes (And How to Fix Them)
+
+| Mistake                        | Example of Bad Prompt                                                    | How to Fix (Good Prompt Example)                                                                                                              |
+|--------------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1. Being Too Vague             | ❌ "Help me with my presentation."                                        | ✅ "Help me create an outline for a 10-minute presentation about sustainable energy for college students."                                           |
+| 2. Asking for Everything at Once | ❌ "Write a business plan, marketing strategy, and financial projections for my food truck." | ✅ "Let's start with a one-page business concept summary for a gourmet taco food truck."                                                        |
+| 3. Not Specifying Tone/Audience | ❌ "Write about the benefits of exercise."                                | ✅ "Write a motivational article about exercise benefits for busy parents, using an encouraging and practical tone."                             |
+| 4. Forgetting to Set Constraints | ❌ "Create a social media strategy."                                    | ✅ "Create a simple social media strategy for Instagram and TikTok, focusing on 3 post types, with a budget under $100/month."                     |
+| 5. Not Iterating               | (After a bad first response) *User gives up.* | ✅ Refine with follow-up prompts like: "Make this more conversational," "Add specific examples," "Shorten this to 3 key points." |
+
+Advanced Prompting: The Chain-of-Thought Method
+For complex problems, break them into steps:
+Instead of:
+"How should I price my consulting service?"
+Try:
+"I'm launching a marketing consulting service. Walk me through the process of setting my prices step by step:
+1.  First, help me identify what factors I should consider.
+2.  Then, guide me through researching competitor pricing.
+3.  Next, help me calculate my costs and desired profit.
+4.  Finally, help me choose a pricing strategy.
+Format this as a practical workbook I can follow."
+
+Industry-Specific Prompting Examples
+* **For Students:**
+    "You are a study coach. Help me create a study schedule for my upcoming chemistry exam. I have 2 weeks, study best in 45-minute blocks, and struggle most with organic chemistry concepts. Include specific review techniques for each topic."
+* **For Business Professionals:**
+    "As an experienced sales manager, help me write a follow-up email to a client who showed interest but hasn't responded in 2 weeks. The tone should be professional but not pushy, and include a soft call-to-action."
+* **For Creatives:**
+    "You are a creative director brainstorming with me. I need 10 unique concepts for a social media campaign promoting eco-friendly products to millennials. Each concept should include a catchy tagline and visual description."
+* **For Entrepreneurs:**
+    "Act as a business mentor. I have an idea for a meal-planning app. Help me identify potential problems with this idea and suggest ways to validate demand before building anything."
+
+The Future of Prompting
+As AI becomes more sophisticated, prompting is evolving too:
+* **Current State:** We write detailed instructions.
+* **Near Future:** AI will ask clarifying questions and remember our preferences.
+* **Long-term Vision:** AI will understand context so well that minimal prompting is needed.
+But for now, mastering the art of clear, specific communication with AI is your competitive advantage.
+
+Building Your Prompting Toolkit
+* **Start a Prompt Library:**
+    Keep a document with effective prompts you've created. Organize by category:
+    * Email templates
+    * Writing assistance
+    * Problem-solving
+    * Creative brainstorming
+    * Learning and explanation
+* **Practice Daily:**
+    Try to use AI for at least one task each day, focusing on improving your prompts rather than just getting quick answers.
+* **Learn from Others:**
+    Follow prompt-sharing communities and see how experienced users craft their instructions.
+
+Key Takeaway for Chapter 1.4
+Prompting is the bridge between your needs and AI's capabilities. Like any communication skill, it improves with practice and intention. The better you become at articulating exactly what you want from AI, the more valuable AI becomes as a tool for work, learning, and creativity.
+
+Quick Self-Check: Take a task you do regularly (writing emails, planning projects, solving problems) and craft a detailed prompt that would help an AI assist you with this task. Include context, role, specific requirements, and format preferences.`
+    }
+  ]
+},
     {
       id: "module-2",
       title: "Mastering Conversational AI",
