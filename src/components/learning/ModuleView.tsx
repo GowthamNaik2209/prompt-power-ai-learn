@@ -1,8 +1,7 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Clock, BookOpen } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Chapter {
   id: number;
@@ -32,6 +31,23 @@ interface ModuleViewProps {
 
 export const ModuleView = ({ module, onBack, currentChapter, onChapterClick }: ModuleViewProps) => {
   const currentChapterData = currentChapter ? module.chapterList.find(c => c.id === currentChapter) : null;
+  const currentChapterIndex = currentChapter ? module.chapterList.findIndex(c => c.id === currentChapter) : -1;
+  const hasNextChapter = currentChapterIndex < module.chapterList.length - 1;
+  const hasPreviousChapter = currentChapterIndex > 0;
+
+  const goToNextChapter = () => {
+    if (hasNextChapter) {
+      const nextChapter = module.chapterList[currentChapterIndex + 1];
+      onChapterClick(nextChapter.id);
+    }
+  };
+
+  const goToPreviousChapter = () => {
+    if (hasPreviousChapter) {
+      const previousChapter = module.chapterList[currentChapterIndex - 1];
+      onChapterClick(previousChapter.id);
+    }
+  };
 
   if (currentChapter && currentChapterData) {
     return (
@@ -55,6 +71,9 @@ export const ModuleView = ({ module, onBack, currentChapter, onChapterClick }: M
               <Clock className="h-4 w-4 mr-1" />
               {currentChapterData.duration}
             </span>
+            <span className="text-sm text-gray-500">
+              Chapter {currentChapter} of {module.chapterList.length}
+            </span>
           </div>
         </div>
 
@@ -64,6 +83,76 @@ export const ModuleView = ({ module, onBack, currentChapter, onChapterClick }: M
               <div className="text-gray-700 leading-relaxed text-lg whitespace-pre-line">
                 {currentChapterData.content}
               </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Chapter Navigation */}
+        <div className="flex justify-between items-center pt-6">
+          <div>
+            {hasPreviousChapter && (
+              <Button 
+                variant="outline" 
+                onClick={goToPreviousChapter}
+                className="flex items-center space-x-2"
+              >
+                <ChevronLeft className="h-4 w-4" />
+                <span>Previous Chapter</span>
+              </Button>
+            )}
+          </div>
+          
+          <div className="text-center">
+            <span className="text-sm text-gray-500">
+              {currentChapterIndex + 1} of {module.chapterList.length} chapters
+            </span>
+          </div>
+          
+          <div>
+            {hasNextChapter && (
+              <Button 
+                onClick={goToNextChapter}
+                className="flex items-center space-x-2"
+              >
+                <span>Next Chapter</span>
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            )}
+          </div>
+        </div>
+
+        {/* Chapter Overview */}
+        <Card className="bg-gray-50">
+          <CardContent className="p-6">
+            <h3 className="text-lg font-semibold mb-4">Chapter Overview</h3>
+            <div className="grid gap-2">
+              {module.chapterList.map((chapter, index) => (
+                <div 
+                  key={chapter.id}
+                  className={`flex items-center justify-between p-3 rounded-lg cursor-pointer transition-colors ${
+                    chapter.id === currentChapter 
+                      ? 'bg-blue-100 border-2 border-blue-300' 
+                      : 'bg-white hover:bg-gray-100'
+                  }`}
+                  onClick={() => onChapterClick(chapter.id)}
+                >
+                  <div className="flex items-center space-x-3">
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium ${
+                      chapter.id === currentChapter 
+                        ? 'bg-blue-600 text-white' 
+                        : 'bg-gray-300 text-gray-600'
+                    }`}>
+                      {index + 1}
+                    </div>
+                    <span className={`font-medium ${
+                      chapter.id === currentChapter ? 'text-blue-900' : 'text-gray-700'
+                    }`}>
+                      {chapter.title}
+                    </span>
+                  </div>
+                  <span className="text-sm text-gray-500">{chapter.duration}</span>
+                </div>
+              ))}
             </div>
           </CardContent>
         </Card>
