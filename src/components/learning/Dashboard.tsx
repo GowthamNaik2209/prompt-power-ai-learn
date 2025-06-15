@@ -61,50 +61,129 @@ export const Dashboard = ({ user }: DashboardProps) => {
       ]
     },
     {
-      id: "module-2",
-      title: "Mastering Conversational AI",
-      description: "Learn to have productive conversations with AI assistants like ChatGPT",
-      chapters: 6,
+      id: "module-generative-ai",
+      title: "The Generative AI Revolution - Creative Machines",
+      description: "In Module 1, you learned that AI is fundamentally about machines learning patterns to solve problems. Now, we're diving into the most talked-about and transformative branch of AI: Generative AI. This module will unveil how AI has evolved from analyzing existing information to actually creating brand new, original content. Get ready to explore the exciting capabilities of AI as your creative collaborator.",
+      chapters: 1, // Only one chapter provided in the HTML snippet for Module 2
       completedChapters: 0,
-      estimatedTime: "3 hours",
+      estimatedTime: "30-40 minutes",
       difficulty: "Beginner" as const,
       isLocked: false,
       chapterList: [
-        { 
-          id: 1, 
-          title: "Getting Started with ChatGPT, Gemini, and Claude", 
-          duration: "25 min",
-          content: "Your First AI Hello\n\nYou've heard about these powerful LLMs, but how do you actually start using them? This chapter will give you a detailed quick tour of the most popular platforms, showing you how to sign up, navigate their interfaces, and send your very first prompt to begin your interactive AI journey.\n\nAccessing the Platforms: Your AI Login\n\nMost LLMs are accessible through a web browser, much like using your favorite social media platform or cloud document editor. You typically need to create a free account, often using your email or a readily available Google/Microsoft account for quick sign-up.\n\nChatGPT (OpenAI): Navigate to chat.openai.com. You can sign up using an existing Google or Microsoft account, or by providing an email address and creating a new password. OpenAI's interface is generally clean and user-friendly.\n\nGoogle Gemini: Visit gemini.google.com. You'll need to sign in with your Google account. Gemini often integrates well with other Google services.\n\nAnthropic Claude: Visit claude.ai. The sign-up process usually involves providing an email address, after which a verification code will be sent to confirm your identity.\n\nNavigating the Interface: The Command Center of Your AI Assistant\n\nKey Elements You'll Find:\n\n• Input Box: Located at the bottom of the screen, this is where you type your prompts\n• Send Button: Adjacent to the input box, typically a paper airplane icon\n• Conversation History: Shows your prompts and AI responses chronologically\n• New Chat Button: Starts a fresh conversation, clearing the AI's memory\n• Sidebar: Repository of your past chat history\n\nYour First \"Hello World\" Prompt:\n\nTry typing: \"Hello AI, introduce yourself in one sentence.\"\n\nUnderstanding the \"Memory\" of a Chat: The Context Window\n\nWhen you continue typing in the same chat window, the AI remembers all previous turns of that conversation. However, if you start a new chat, the AI will not remember anything from previous conversations. This distinction is vital for efficient AI interaction."
-        },
-        { 
-          id: 2, 
-          title: "The Art of the Perfect Prompt - Beyond the Basics", 
-          duration: "30 min",
-          content: "Recap: The Foundation of Good Prompting\n\nIn Module 1, we established that a prompt is your instruction to the AI. We learned that being clear, specific, and even assigning a role to the AI can dramatically improve results. Now, let's go deeper.\n\nAdding Context: Giving the AI the Full Picture\n\nImagine onboarding a new human assistant. If you just say, \"Write an email about the project,\" they'd be lost. Similarly, an AI needs background information to produce relevant and useful output.\n\nHow to provide effective context:\n\n• Provide Background Information: Set the scene for the AI\n• Define the Purpose/Goal: Explicitly state why you're asking for this output\n• Specify the Audience: Who is reading or interacting with the AI's output?\n\nExample:\nVague Prompt: \"Write an email.\"\nImproved Prompt: \"You are a friendly customer service representative for a new organic coffee subscription service. Write a welcome email to our early sign-up list, announcing a special 20% off introductory offer. The goal is to encourage their first purchase. Keep the tone warm, inviting, and concise, targeting young adults who prioritize ethical sourcing and convenience.\"\n\nDefining Output Format: How You Want It Delivered\n\nAI can produce information in many ways. Define the format to ensure usable results:\n\n• Structure: \"Give me bullet points,\" \"Format as a formal business letter\"\n• Tone: \"Use a professional tone,\" \"Sound enthusiastic and encouraging\"\n• Length: \"Under 150 words,\" \"Approximately 500 words\"\n\nIterative Prompting: Refining AI's Output\n\nThis is perhaps the most powerful technique. Instead of crafting one perfect prompt, engage in conversation with the AI, progressively refining its output.\n\nSteps for Effective Iterative Prompting:\n1. Start with a basic, foundational prompt\n2. Review the AI's response critically\n3. Provide specific, actionable feedback\n4. Repeat the process until satisfied\n\nThe Importance of Examples: \"Show, Don't Just Tell\"\n\nProviding relevant examples in your prompt can be incredibly effective. It's a powerful way to \"show, don't just tell\" the AI your desired output style or format."
-        },
-        { 
-          id: 3, 
-          title: "Use Case: Supercharging Your Email Workflow", 
-          duration: "35 min",
-          content: "Your Email Assistant: Reclaiming Your Inbox\n\nEmails consume significant portions of our day. Think of your LLM as a highly efficient, always-on email assistant that can help you draft, summarize, and polish your messages in seconds.\n\n1. Drafting Emails: From Scratch or from Sparse Notes\n\nPractical Prompts:\n• \"Write a polite email declining a meeting invitation from John Doe for the project review, stating that I have a prior commitment but suggesting rescheduling for sometime next week.\"\n• \"Draft a warm thank-you email to our new client, Sarah Chen, for signing up for our premium digital marketing service. Invite her to contact our support team if she has questions.\"\n• \"Generate a sales follow-up email to a lead who downloaded our e-book on 'Sustainable Living Tips.' Offer a 10% discount with code 'ECOSTART'. Keep it friendly and concise.\"\n\n2. Summarizing Long Email Threads: Cutting Through the Noise\n\nEffective Prompts:\n• \"Summarize the key decisions, action items, and assigned owners from the following email thread:\" (Paste content)\n• \"What are the main points of disagreement in this email exchange between marketing and sales teams?\" (Paste content)\n• \"Extract all dates, deadlines, and requirements mentioned in this email thread regarding the Q4 product launch:\"\n\n3. Improving Tone: Striking the Right Chord\n\nPrompts to Refine Email Tone:\n• \"Make this email draft sound more professional and concise, removing informal language:\" (Paste draft)\n• \"Rephrase this paragraph to sound more empathetic for a customer experiencing technical problems:\" (Paste paragraph)\n• \"Adjust this team update to sound more enthusiastic and encouraging:\"\n\n4. Generating Subject Lines: Boosting Open Rates\n\nPrompts for Subject Lines:\n• \"Generate 5 catchy subject lines for an email announcing a new fitness app for beginners.\"\n• \"Suggest 3 urgent subject lines for an email about an upcoming project deadline this Friday.\"\n• \"Provide 4 professional subject lines for a Q3 financial results presentation meeting invitation.\"\n\nKey Takeaway: LLMs can dramatically reduce email time while improving clarity, professionalism, and impact."
-        },
-        { 
-          id: 4, 
-          title: "Use Case: Brainstorming and Creative Writing", 
-          duration: "20 min",
-          content: "Your Creative Partner: Unleashing Imagination\n\nFeeling stuck? Grappling with writer's block? LLMs are fantastic brainstorming partners and can help kickstart creative writing projects. With their vast training on human creativity, they can generate endless ideas, develop characters, and produce creative pieces.\n\n1. Generating Ideas: A Fountain of Inspiration\n\nComprehensive Prompts:\n• \"Brainstorm 10 unique blog post topics about remote work challenges for maintaining team cohesion. Focus on practical, actionable advice.\"\n• \"I'm launching a sustainable clothing brand targeting Gen Z. Give me 15 creative name ideas that convey eco-friendliness and modern style. Avoid generic terms.\"\n• \"Suggest 8 compelling social media content ideas for a local bakery, specifically for Instagram Reels and TikTok. Ideas should encourage engagement and show behind-the-scenes processes.\"\n• \"What are 5 innovative ways to market a new educational coding app for middle school students? Think about reaching both students and parents.\"\n\n2. Writing Short Stories, Poems, and Song Lyrics: AI as Your Co-Author\n\nPrompts to Kickstart Creative Writing:\n• \"Write a short story (under 500 words) about a talking dog detective named 'Sherlock Bones' in a bustling city. Make it humorous with noir elements.\"\n• \"Compose a short poem (4 stanzas, AABB rhyme scheme) about autumn leaves, focusing on colors and melancholy as winter approaches.\"\n• \"Write the chorus and first verse for a pop song about overcoming personal challenges. Theme should be empowerment and resilience.\"\n• \"Create detailed dialogue between two friends planning a surprise party. Sarah is organized, Mark is spontaneous. Show their personalities through planning styles.\"\n\n3. Overcoming Writer's Block: Your Idea Generator\n\nPrompts to Break Through Writer's Block:\n• \"I'm writing an essay on 'Social Media's Impact on Adolescent Mental Health.' I'm stuck on the introduction. Give me three opening paragraph ideas with unique angles.\"\n• \"I need to describe a mysterious old mansion in a gothic novel. Give me 5 vivid exterior descriptions focusing on eerie details like overgrown vines and broken windows.\"\n• \"My character needs to deliver a speech to rally a disheartened team before competition. What are 3 ways they could start to grab attention and inspire hope?\"\n\nKey Takeaway: LLMs are powerful creative collaborators that can banish writer's block, generate diverse ideas, and draft initial versions of creative content. Use iterative prompting to guide the AI towards your precise creative vision."
-        },
-        { 
-          id: 5, 
-          title: "Use Case: Learning & Summarizing Complex Topics", 
-          duration: "40 min",
-          content: "Your Personal Tutor and Research Assistant: Knowledge at Your Fingertips\n\nIn today's information-rich world, learning efficiently and synthesizing vast amounts of data are invaluable skills. LLMs excel at breaking down complex concepts, summarizing lengthy documents, and creating personalized study materials.\n\n1. Asking AI to Explain Difficult Concepts: Simplifying the Complex\n\nPrompts to Clarify Complex Concepts:\n• \"Explain quantum entanglement to me like I'm 10 years old, using a simple, everyday analogy.\"\n• \"What is blockchain technology, and how is it different from traditional databases? Use analogies related to shared ledgers.\"\n• \"Break down photosynthesis into five easy steps, suitable for a high school biology student.\"\n• \"I'm confused about inflation vs deflation. Explain clearly with real-world examples for each.\"\n• \"Describe Object-Oriented Programming using house-building analogies, relating classes and objects to blueprints and buildings.\"\n• \"Explain Einstein's Theory of Relativity in under 100 words, focusing on core ideas without complex physics terms.\"\n\n2. Summarizing Long Articles, Research Papers, or Meeting Transcripts\n\nEffective Prompts to Summarize:\n• \"Summarize the key findings, methodology, and conclusions from this climate change research paper in 5 bullet points:\" (Paste text)\n• \"Extract main arguments from each speaker in this renewable energy debate transcript:\" (Paste content)\n• \"What are key takeaways from this economic outlook article? Provide one-paragraph summary and 3 recommendations.\" (Paste article)\n• \"List all action items assigned to specific people with deadlines from this project meeting transcript:\" (Paste transcript)\n• \"From this product review, identify top 3 pros and cons, then give overall sentiment rating.\" (Paste review)\n\n3. Creating Study Guides or Flashcards: Personalized Learning Aids\n\nPrompts to Generate Study Materials:\n• \"I'm studying for an American Civil War exam. Generate 10 flashcard questions covering key events, figures, and battles from 1861-1865.\"\n• \"Create a study guide outline for human anatomy and physiology. Focus on major organ systems and include key functions and disorders.\"\n• \"From this marketing text, summarize the '4 P's of Marketing' and create 5 multiple-choice questions with answers.\" (Paste text)\n• \"Give me 15 common Spanish verbs with English translations, formatted as a two-column table for flashcards.\"\n• \"Generate 5 short-answer questions based on this climate change mitigation lecture transcript.\" (Paste transcript)\n\nKey Takeaway: LLMs can fundamentally enhance learning efficiency by simplifying complex information, summarizing lengthy content, and creating personalized study materials, freeing up time for critical thinking and deeper understanding."
-        },
-        { 
-          id: 6, 
-          title: "Comparing the Chats: When to Use Which?", 
-          duration: "25 min",
-          content: "Choosing the Right Tool for the Job: An AI Matchmaker\n\nChoosing the \"best\" AI is about selecting the right tool for the specific task. Different LLMs have unique strengths and 'personalities' that make them better suited for different types of queries.\n\nUnbiased Comparison:\n\nChatGPT (OpenAI):\n• Primary Focus: General-purpose dialogue, creativity, programming assistance\n• Ideal For: Creative writing, brainstorming, coding help, explaining complex topics engagingly\n• Strengths: Highly versatile, strong creative abilities, natural conversational text, large community\n• Weaknesses: Can \"hallucinate\" outdated information, sometimes verbose, may struggle with specific factual accuracy\n• Personality: Enthusiastic, versatile, engaging\n\nGoogle Gemini:\n• Primary Focus: Information retrieval, real-time data, multimodal understanding\n• Ideal For: Research, factual queries, current events, Google Workspace integration, visual analysis\n• Strengths: Access to current information, seamless Google integration, multiple response drafts, multimodal capabilities\n• Weaknesses: Can be less creative than ChatGPT, sometimes overly cautious, still evolving multimodal applications\n• Personality: Factual, efficient, integrated\n\nClaude (Anthropic):\n• Primary Focus: Safety, long-context processing, nuanced reasoning\n• Ideal For: Summarizing very long documents, in-depth analysis, sensitive topics, professional communication\n• Strengths: Exceptional context handling, robust safety guidelines, detailed analytical reasoning, less \"fluff\"\n• Weaknesses: Less known for general creative tasks, interface might feel less intuitive, slower for rapid exchanges\n• Personality: Thoughtful, careful, detail-oriented\n\nWhen to Choose Which LLM:\n\n• Need creative spark or versatile dialogue? → ChatGPT\n• Doing research or need current information? → Google Gemini\n• Working with long documents or sensitive content? → Claude\n• Heavy Microsoft Office user? → Consider Microsoft Copilot\n\nTrust Building: Important Reminders\n\nRegardless of which LLM you choose:\n\n• Verify Important Information: LLMs can \"hallucinate\" - always double-check critical facts\n• Understand Limitations: They're pattern-matching algorithms, not conscious beings\n• Human Oversight is Key: These tools amplify human capabilities, don't replace human judgment\n\nKey Takeaway: Each LLM has unique strengths. Choosing the right tool for specific tasks enhances results and efficiency. Always combine AI's speed with your critical thinking and commitment to verifying crucial information."
+        {
+          id: 1,
+          title: "Generative AI - The 'Creative' Machines",
+          duration: "30-40 min",
+          content: `The Creative Breakthrough: AI That Creates
+
+Now, let's talk about the specific type of AI that has captured global attention and ignited a new wave of innovation: Generative AI. You've probably seen headlines or heard terms like ChatGPT, DALL-E, Midjourney, or Sora. These tools represent a truly revolutionary category of AI. Unlike the traditional AI we discussed in Module 1 (which primarily recognizes patterns or makes recommendations based on existing data), Generative AI possesses the remarkable ability to create new content – content that has never existed before.
+
+This isn't about copying; it's about synthesizing. Generative AI learns the underlying patterns, structures, and styles from vast amounts of existing data (text, images, audio, video) and then uses that learned understanding to generate novel outputs that are original yet consistent with the patterns it has observed.
+
+The Artist Analogy: Learning, Then Creating
+
+To grasp what Generative AI does, let's use a powerful analogy:
+
+Imagine the most knowledgeable librarian you can possibly conceive. Now, amplify that knowledge exponentially. This librarian has not only read every single book, article, scientific paper, blog post, website, and digital document ever written in multiple languages – they have also memorized every conversation, every email exchange, every script, and every social media post. They possess perfect recall and can instantly retrieve, synthesize, and reformulate information on virtually any topic. Furthermore, they can write in any style, from academic papers and formal business emails to casual conversations and imaginative creative stories.
+
+That's essentially what a Large Language Model (LLM) is – a digital super-librarian that has "read" and processed an incomprehensibly vast amount of text-based information. It uses this "reading" to assist you with almost any language-related task, acting as a highly informed and versatile textual assistant.
+
+What Makes Generative AI Fundamentally Different?
+
+To highlight the distinction, let's compare Generative AI to the "traditional" or "analytical" AI we covered in Module 1:
+
+Traditional AI (Analytical AI): Understanding Existing Information
+* Focus: Classification, prediction, recognition, recommendation, analysis of existing data.
+* Questions it answers:
+    * "Is this email spam or not spam?" (Classification)
+    * "Which movie should I recommend to this user?" (Recommendation)
+    * "What's the fastest route to work given current traffic?" (Prediction/Optimization)
+    * "Does this image contain a cat?" (Recognition)
+
+Generative AI: Creating New Information
+* Focus: Creation, synthesis, imagination, generation of new and novel content.
+* Questions it answers:
+    * "Write me a compelling short story about a time-traveling chef." (Text generation)
+    * "Create an image of a cat wearing sunglasses sitting on a tropical beach." (Image generation)
+    * "Compose a short piece of classical music in the style of Beethoven." (Audio generation)
+    * "Generate a 10-second video of ocean waves at sunset." (Video generation)
+
+The shift is profound: from understanding to creating.
+
+The Big Three: Text, Images, and Video - Current Frontiers of Generative AI
+
+| Type of Generative AI | What It Does (Examples of Outputs) | Popular Tools You Might Know | Real-World Use Case Example |
+|---|---|---|---|
+| 1. Text Generation | Writes essays, stories, emails, marketing copy, code, poems, scripts – virtually any form of written text you can imagine. | ChatGPT, Google Gemini, Anthropic Claude, Microsoft Copilot | A marketing manager uses ChatGPT to rapidly draft 10 different email subject lines for a new product launch campaign, then selects the most effective one. |
+| 2. Image Generation | Creates entirely original still images from simple text descriptions (prompts), or transforms existing images into new styles. | DALL-E, Midjourney, Stable Diffusion, Adobe Firefly, Bing Image Creator | A small business owner creates compelling social media graphics or unique product concepts by typing descriptions like "modern logo for organic coffee shop with mountain theme." |
+| 3. Video Generation | Generates short video clips from text descriptions, animates still images, or extends existing video segments. This is the newest and most rapidly evolving frontier. | Sora, Runway ML, Pika Labs, HeyGen | A content creator generates a dynamic 10-second video clip of "ocean waves at sunset with a distant sailboat" for their YouTube channel intro or a social media advertisement. |
+
+How Generative AI "Thinks": A Pattern-Matching Masterpiece
+
+Here's a simplified way to understand the underlying mechanism of how Generative AI operates. It's not about conscious thought, but about highly sophisticated pattern recognition and reconstruction:
+
+1. Learning Phase (Extensive Training): The AI is "trained" on unimaginably vast datasets. For text generation, this means reading billions of sentences, books, articles, and websites. For image generation, it means analyzing millions of images and their descriptions. For video, it means processing countless hours of video footage. During this phase, the AI identifies subtle and complex patterns in how words follow each other, how pixels combine to form objects and scenes, and how objects move and interact over time.
+2. Pattern Recognition (Deep Understanding): It doesn't just memorize; it learns statistical relationships and structures. It identifies what makes good writing (grammar, style, coherence), compelling images (composition, lighting, color), or engaging videos (movement, transitions, continuity). It learns the "rules" and "aesthetics" inherent in the training data.
+3. Generation Phase (Synthesizing New Content): When you provide it with a prompt (your instruction), the AI doesn't search for a matching piece of content to copy. Instead, it uses the patterns it learned during training to predict and synthesize something entirely new. For example, if you ask for a poem, it predicts which words are statistically most likely to follow each other to create a coherent, poetic verse based on millions of poems it has seen. For an image, it predicts how pixels should be arranged to form the described object or scene.
+4. Refinement (Self-Correction): Modern Generative AIs also have internal mechanisms to refine their creations. They check their generated output against what they learned to ensure it makes sense, is coherent, and adheres to the requested style or content. This iterative internal process helps to produce high-quality, relevant results.
+
+This process is remarkably similar to how humans learn to be creative. A musician doesn't create songs in a vacuum – they're influenced by all the music they've heard, the instruments they've practiced, and the theories they've learned throughout their life. The AI works on a parallel principle, but with access to vastly more examples and the ability to process them at speeds no human could ever achieve.
+
+The Magic and the Limitations of Generative AI
+
+Like any powerful technology, Generative AI comes with both incredible benefits and important limitations that users must be aware of:
+
+| What's Magical and Powerful About It | What It Can't Do (Yet) – Important Limitations |
+|---|---|
+| Speed & Efficiency: Creates complex content in seconds or minutes that might take humans hours or days, dramatically accelerating workflows. | Truly Original Thought: It recombines and extrapolates from existing ideas rather than having genuine, groundbreaking original thoughts or consciousness. |
+| Infinite Variety: Can produce countless variations, styles, and iterations on any given theme or instruction, aiding exploration and reducing creative blocks. | Fact-Checking & "Hallucinations": It can confidently state incorrect, nonsensical, or fabricated information. This "hallucinating" occurs because it prioritizes generating coherent text based on patterns over factual accuracy. |
+| Accessibility & Democratization: Anyone can use it with simple prompts, no specialized artistic or coding training required. Lowers the barrier to sophisticated content creation. | Deep Emotional Understanding & Consciousness: It mimics emotional language and creative styles but doesn't truly feel emotions, possess self-awareness, or have genuine understanding like humans. |
+| Consistency & Scalability: Works tirelessly 24/7 without getting tired, losing inspiration, or declining in quality, making it ideal for large-scale content generation. | Long-term Memory (per session): Most LLMs have limited "memory" within a single conversation thread and typically don't remember you or past conversations when you start a new chat, requiring re-contextualization. |
+| Bridges Skill Gaps: Enables individuals without specific artistic, writing, or coding skills to produce high-quality outputs, acting as a powerful assistant. | Access to Real-Time External Systems: By default, LLMs cannot browse the live internet, make phone calls, send emails, or control other software unless explicitly integrated via specialized "plugins" or extensions. |
+
+Real-World Applications You Can Use Today: Putting Generative AI to Work
+
+Generative AI is not just a fascinating concept; it's a practical tool being adopted across virtually every sector. Here are just a few ways people are already using it in their daily lives, work, and studies:
+
+* For Students:
+    * Generate essay outlines and initial research starting points (e.g., "Give me an outline for an essay on the causes of World War I").
+    * Create customized study guides or flashcards from lecture notes or textbook chapters.
+    * Practice language skills by having a conversation partner that corrects grammar and offers vocabulary suggestions.
+* For Professionals (Marketing, Sales, HR, etc.):
+    * Rapidly draft emails, proposals, and internal communications.
+    * Generate engaging social media content, blog post ideas, and website copy.
+    * Overcome writer's block for presentations, reports, or business plans.
+    * Create scripts for short videos or webinars.
+* For Creatives (Writers, Designers, Artists, Musicians):
+    * Generate story prompts, character descriptions, or plot outlines to kickstart writing projects.
+    * Create concept art, mood boards, or design variations for visual projects.
+    * Experiment with different artistic styles or musical genres.
+    * Generate variations of song lyrics or melodies.
+* For Everyday Users (Personal Life):
+    * Plan meals and generate recipes based on available ingredients or dietary restrictions.
+    * Create personalized workout routines or travel itineraries.
+    * Draft thoughtful thank-you notes, birthday messages, or personalized invitations.
+    * Summarize complex news articles or long online reviews before making a purchase decision.
+
+The Economic Impact: A Productivity Multiplier
+
+Generative AI is not merely a technological marvel; it's rapidly reshaping how work gets done across industries. Its primary impact is not necessarily replacing humans entirely, but rather making humans vastly more productive and efficient.
+
+Consider these transformations:
+* A graphic designer can now generate 20 diverse concept designs for a logo in the time it used to take to manually create just 3, accelerating the iteration process.
+* A content writer can produce a high-quality first draft of a blog post or marketing email in minutes instead of hours, allowing them to focus on refinement and strategy.
+* A programmer can generate snippets of code, debug errors, or translate code between languages instantly, dramatically speeding up development cycles.
+
+This unparalleled boost in productivity is precisely why businesses are investing heavily in Generative AI. It's not just a "cool" new technology; it's a powerful "productivity multiplier" that enables individuals and teams to accomplish more, faster, and with higher quality, leading to significant economic advantages.
+
+Key Takeaway for Chapter 2.1
+
+Generative AI represents a fundamental and exciting shift from AI that merely processes information to AI that actively creates new information. It operates like a creative collaborator that never gets tired, can work in virtually any style, and can produce endless variations on any idea you provide. While it has inherent limitations (especially concerning factual accuracy and true consciousness), its ability to dramatically accelerate human creativity and amplify productivity is already transforming how we work, learn, and create in the modern world. Embrace it as a powerful tool in your toolkit.
+
+Quick Self-Check: Generative AI
+1. Describe in your own words the core difference between the "traditional AI" from Module 1 and "Generative AI."
+2. Think of one creative task you do regularly (e.g., writing emails, creating presentations for work, planning social events, sketching ideas). How might Generative AI specifically help you do this task faster or better, citing one of its "magical" qualities?
+3. Given Generative AI's limitations, what's one piece of advice you would give someone starting to use it for content creation?`
         }
       ]
     },
@@ -353,16 +432,16 @@ export const Dashboard = ({ user }: DashboardProps) => {
               <CardHeader>
                 <CardTitle>Continue Learning</CardTitle>
                 <CardDescription>
-                  Pick up where you left off in Module 2: Mastering Conversational AI
+                  Pick up where you left off in Module 2: The Generative AI Revolution - Creative Machines
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="font-medium">Chapter 2.1: Getting Started with ChatGPT, Gemini, and Claude</h4>
-                    <p className="text-sm text-gray-600">Learn how to access and navigate popular AI platforms</p>
+                    <h4 className="font-medium">Chapter 2.1: Generative AI - The 'Creative' Machines</h4>
+                    <p className="text-sm text-gray-600">Explore the exciting capabilities of AI as your creative collaborator</p>
                   </div>
-                  <Button onClick={() => handleModuleClick("module-2")}>Continue Learning</Button>
+                  <Button onClick={() => handleModuleClick("module-generative-ai")}>Continue Learning</Button>
                 </div>
               </CardContent>
             </Card>
